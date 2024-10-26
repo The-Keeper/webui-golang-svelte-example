@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+import extractorSvelte from '@unocss/extractor-svelte'
+import UnoCSS from 'unocss/vite'
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [svelte()],
-})
+export default {
+  plugins: [
+    UnoCSS({
+      extractors: [
+        extractorSvelte(),
+      ],
+      /* more options */
+    }),
+    svelte(),
+  ],
+}

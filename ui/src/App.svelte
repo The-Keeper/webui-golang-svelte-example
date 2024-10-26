@@ -5,7 +5,7 @@
 </script>
 
 <main>
-  <div>
+  <div class="flex">
     <a href="https://vite.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
     </a>
