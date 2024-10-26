@@ -30,18 +30,13 @@ func main() {
 	}
 
 	http.Handle("/", http.FileServer(http.FS(fsys)))
-	http.ListenAndServe(":8050", nil)
+	go http.ListenAndServe(":8050", nil)
 
 	w := webui.NewWindow()
 
-	w.SetRootFolder("ui")
-
 	w.Bind("__close-btn", Close)
 
-	if err := w.ShowBrowser("index.html", webui.ChromiumBased); err != nil {
-		println("Warning: Install a Chromium-based web browser for an optimized experience.")
-		w.Show("index.html")
-	}
+	w.Show("http://localhost:8050")
 
 	webui.Wait()
 }
