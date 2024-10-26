@@ -33,7 +33,8 @@ func main() {
 	go http.ListenAndServe(":8050", nil)
 
 	w := webui.NewWindow()
-
+	w.SetPort(8051)
+	
 	w.Bind("__close-btn", Close)
 
 	w.Show("http://localhost:8050")
