@@ -1,3 +1,9 @@
+Building desktop app UIs using awesome [WebUI library](https://github.com/webui-dev/go-webui) and Svelte.
+
+## Requirements
+- Go 1.22 or later
+- Bun
+
 ## Installation and running
 
 Clone the repository:
